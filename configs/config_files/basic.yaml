@@ -1,0 +1,39 @@
+title: 'visual prompt tuning'
+
+data:
+    root: './../data'
+    dataset: 'cifar10'
+    num_classes: 10
+
+model:
+    name: 'resnet18'
+    pretrained: True
+
+train:
+    classifier: True
+    backbone: False
+
+    set:
+        epoch: 50
+        batch: 32
+        lr: 1e-2
+        dropout: 0.
+        optimizer: 'adam'
+        momentum: 0.9
+        criterion: 'CE'
+
+        scheduler:
+            warmup_lr_init: 1e-3
+            warmup_t: 5
+            k_decay: 1.5
+            lr_min: 1e-4
+
+prompt:
+    set: True
+    type: 'pad'
+    size: 10
+    num_of_patch: 4
+
+warmup: 
+    set: False
+    epoch: 20

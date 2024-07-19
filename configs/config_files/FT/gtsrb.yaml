@@ -1,0 +1,25 @@
+method: 'FT'
+
+data:
+    root: './../data'
+    dataset: 'gtsrb'
+    num_classes: 43
+
+model:
+    name: 'vit_base_patch16_224'
+
+train:
+    epoch: 100
+    batch: 128
+    lr: 1e-3
+    dropout: 0.
+    optimizer: 'adam'
+    momentum: 0.9
+    criterion: 'CE'
+
+    scheduler:
+        warmup_lr_init: 1e-3
+        warmup_t: 5
+        k_decay: 1.
+        lr_min: 1e-4
+

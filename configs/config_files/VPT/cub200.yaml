@@ -1,0 +1,31 @@
+method: 'VPT'
+
+data:
+    root: './../data'
+    dataset: 'cub200'
+    num_classes: 200
+
+model:
+    name: 'vit_base_patch16_224'
+
+
+prompt:
+    hidden_dim: 20
+    bottle_neck: 10
+
+
+train:
+    epoch: 50
+    batch: 128
+    lr: 1e-2
+    dropout: 0.
+    optimizer: 'adam'
+    momentum: 0.9
+    criterion: 'CE'
+
+    scheduler:
+        warmup_lr_init: 1e-2
+        warmup_t: 5
+        k_decay: 1.
+        lr_min: 1e-3
+
