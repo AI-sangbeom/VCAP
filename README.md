@@ -4,3 +4,4 @@ Link: https://drive.google.com/drive/folders/1BBgZys0Pwz7Y_JlQKrdPSijkMUQlthYc?u
 
 train with vcap module
 
+ bash run.sh {gpu number}
