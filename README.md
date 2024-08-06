@@ -5,4 +5,4 @@ Link: https://drive.google.com/drive/folders/1BBgZys0Pwz7Y_JlQKrdPSijkMUQlthYc?u
 train VCAP
 - bash run.sh {gpu number}
 
-The train log will be saved in 
+The train log will be saved at "outputs" folder
